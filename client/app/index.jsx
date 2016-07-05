@@ -4,7 +4,6 @@ import { render } from 'react-dom';
 import { Provider } from 'react-redux';
 
 import '../../node_modules/materialize-css/dist/css/materialize.min.css';
-
 import '../../node_modules/materialize-css/dist/js/materialize.min.js';
 
 import configureStore from './store/configureStore';
@@ -13,11 +12,6 @@ import App from './containers/App';
 const store = configureStore();
 const root = document.querySelector('#root');
 
-/*
-setInterval(function(){
-	console.log('store: ', store.getState());
-}, 3000);
-*/
 
 render(
 	<Provider store={store}>
