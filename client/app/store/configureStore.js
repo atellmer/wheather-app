@@ -1,14 +1,16 @@
 import {
 	createStore,
-	applyMiddleware
+	applyMiddleware,
+	compose,
 } from 'redux';
 import rootReducer from '../reducers/index';
 import ReduxPromise from 'redux-promise';
 
-const createStoreWithMiddleware = applyMiddleware(ReduxPromise)(createStore);
-
 export default function configureStore(initialState) {
-	const store = createStoreWithMiddleware(rootReducer, initialState);
+	const store = createStore(rootReducer, initialState, compose(
+		applyMiddleware(ReduxPromise),
+		window.devToolsExtension ? window.devToolsExtension() : f => f
+	));
 
 	return store;
 }

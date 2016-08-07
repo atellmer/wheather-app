@@ -1,6 +1,6 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 
-import style from './search-bar';
+import style from './search-bar.styl';
 
 class SearchBar extends Component {
 	constructor(props) {
@@ -33,21 +33,21 @@ class SearchBar extends Component {
 					onSubmit={::this.formSubmitHandler}
 				>
 					<div className="row">
-						<div className="col s12 m10">
+						<div className="col s12 m12 l10">
 							<input 
 								type="text" 
-								placeholder="Search weather for a city"
+								placeholder="Поиск погоды по городу"
 								value={this.state.term}
 								onChange={::this.inputChangeHandler}
 							/>
 						</div>
-						<div className="col s12 m2">
+						<div className="col s12 m12 l2">
 							<div className={style.btn}>
 								<button 
 									type="submit" 
 									class="waves-effect waves-light btn"
 								>
-									Search
+									Поиск
 								</button>
 							</div>
 						</div>

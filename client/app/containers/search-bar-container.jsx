@@ -6,7 +6,7 @@ import SearchBar from '../components/search-bar/';
 import * as weatherActions from '../actions/weather';
 
 class SearchBarContainer extends Component {
-	render() {
+	render() {	
 		const { fetchWeather } = this.props.weatherActions;
 		return (
 			<SearchBar fetchWeather={fetchWeather}/>

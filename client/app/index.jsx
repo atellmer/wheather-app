@@ -12,7 +12,6 @@ import App from './containers/App';
 const store = configureStore();
 const root = document.querySelector('#root');
 
-
 render(
 	<Provider store={store}>
 		<App/>
